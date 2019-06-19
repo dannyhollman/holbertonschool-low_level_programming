@@ -2,7 +2,7 @@
 /**
  *main - Print string
  *
- *Return: always 0(success)
+ *Return: always 1(success)
  */
 int main(void)
 {
@@ -11,5 +11,5 @@ while(*s){
   putchar(*s++);
 }
 putchar('\n');
-return (0);
+return (1);
 }

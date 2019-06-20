@@ -7,15 +7,14 @@
  */
 int main(void)
 {
-	char letter[] = "abcdfghijklmnoprstuvwxyz";
+	char letter;
 
-	int arraySize = strlen(letter);
-
-	int i;
-
-	for (i = 0; i < arraySize; i++)
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(letter[i]);
+		if (letter != 'q' && letter != 'e')
+		{
+		putchar(letter);
+		}
 	}
 	putchar('\n');
 	return (0);

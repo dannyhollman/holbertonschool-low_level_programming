@@ -8,6 +8,10 @@ int main(void)
 {
 	int i;
 
-	for (i = 122; i < 27; i++)
+	for (i = 122; i > 96; i--)
 	{
-		putchar
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
+}

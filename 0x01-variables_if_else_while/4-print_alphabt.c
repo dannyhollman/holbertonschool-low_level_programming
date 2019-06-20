@@ -9,7 +9,7 @@ int main(void)
 {
 	char letter[] = "abcdfghijklmnoprstuvwxyz";
 
-	int arraySize = sizeof(letter);
+	int arraySize = strlen(letter);
 
 	int i;
 

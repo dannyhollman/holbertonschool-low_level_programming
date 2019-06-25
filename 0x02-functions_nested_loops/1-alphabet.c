@@ -4,7 +4,7 @@
  *
  * Return: always 0
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char letter;
 
@@ -13,5 +13,4 @@ int print_alphabet(void)
 	_putchar(letter);
 	}
 	_putchar('\n');
-return (0);
 }

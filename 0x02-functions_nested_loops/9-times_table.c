@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-  * times_tables - prints 0-9 times table
+  * times_table - prints 0-9 times table
   *
   * Return: void
   */
@@ -35,7 +35,6 @@ void times_table(void)
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-			
 				}
 			}
 		}

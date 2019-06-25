@@ -1,0 +1,22 @@
+#include "holberton.h"
+/**
+  * _abs - returns absolute value of int
+  *
+  * 
+  *
+  * Return: absolute value
+  */
+int _abs(int i)
+{
+	int n;
+
+	if (i < 0)
+	{
+		n = (i *= (-1));
+	}
+	else
+	{
+		n = i;
+	}
+	return (n);
+}

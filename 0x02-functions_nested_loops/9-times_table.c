@@ -9,7 +9,15 @@ void times_table(void)
 	int i;
 
 	int n;
-
-	for (i = 0; i < 9; i++)
+	
+	int x;
+	
+	for (i = 0; i < 10; i++)
 	{
-		for (n = 0; n < 9 
+		for (n = 0; n < 10; n++)
+		{
+			if (n == 0)
+			{	
+				putchar('0');
+			}	
+			

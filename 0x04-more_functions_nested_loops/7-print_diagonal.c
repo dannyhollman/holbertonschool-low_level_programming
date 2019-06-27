@@ -12,21 +12,29 @@ void print_diagonal(int n)
 
 	int second;
 
-	for (first = 0; first < n; first++)
+	if (n > 0)
 	{
-		second = 0;
-		while (second <= first)
+		for (first = 0; first < n; first++)
 		{
-			if (second == first)
+			second = 0;
+			while (second <= first)
 			{
-				_putchar('\\');
+				if (second == first)
+				{
+					_putchar('\\');
+				}
+				else
+				{
+					_putchar(' ');
+				}
+			second++;
 			}
-			else
-			{
-				_putchar(' ');
-			}
-		second++;
+		_putchar('\n');
 		}
-	_putchar('\n');
+	}
+	else
+	{
+		_putchar('\n');
+
 	}
 }

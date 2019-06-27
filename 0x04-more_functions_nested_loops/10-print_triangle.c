@@ -1,17 +1,18 @@
 #include "holberton.h"
 /**
+  * print_triangle - print triangle pattern
   *
+  * @size: size of triangle 
   *
-  *
-  *
+  * Return: void
   */
 void print_triangle(int size)
 {
 	int col, row;
-	
+
 	int place = size - 1;
 
-	if ( size > 0)
+	if (size > 0)
 	{
 		for (col = 0; col < size; col++)
 		{

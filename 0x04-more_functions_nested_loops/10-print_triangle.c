@@ -2,7 +2,7 @@
 /**
   * print_triangle - print triangle pattern
   *
-  * @size: size of triangle 
+  * @size: size of triangle
   *
   * Return: void
   */

@@ -11,7 +11,7 @@ void print_number(int n)
 	int divide = 1;
 
 	int count = 1;
-	
+
 	/* convert if negative and print '-' */
 	if (n < 0)
 	{

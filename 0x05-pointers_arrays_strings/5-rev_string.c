@@ -2,6 +2,8 @@
 /**
   * rev_string - reverse string
   *
+  * @s: input string
+  *
   * Return: void
   */
 void rev_string(char *s)
@@ -9,7 +11,7 @@ void rev_string(char *s)
 	int count = 0, start = 0;
 
 	char temp1, temp2;
-	
+
 	while (s[count] != '\0')
 	{
 		count++;

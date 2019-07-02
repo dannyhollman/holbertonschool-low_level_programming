@@ -1,9 +1,13 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
+  * print_array - prints n elements of an array
   *
+  * @a: array
   *
+  * @n: size of array
   *
+  * Return: void
   */
 void print_array(int *a, int n)
 {

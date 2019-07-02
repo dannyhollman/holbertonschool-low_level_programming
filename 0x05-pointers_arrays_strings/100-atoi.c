@@ -1,13 +1,14 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
+  * _atoi - converts string to int
   *
+  * @s: string input
   *
-  *
+  * Return: converted string
   */
 int _atoi(char *s)
 {
-	int count = 0, loop, digitCount = 0, neg = 1, start = 0, multiple = 1; 
+	int count = 0, loop, digitCount = 0, neg = 1, start = 0, multiple = 1;
 
 	int temp, number = 0;
 
@@ -31,5 +32,5 @@ int _atoi(char *s)
 		multiple /= 10;
 	}
 	number *= neg;
-	return(number);
+	return (number);
 }

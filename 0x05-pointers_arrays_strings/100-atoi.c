@@ -8,7 +8,7 @@
   */
 int _atoi(char *s)
 {
-	int count = 0, loop, digitCount = 0, neg = 1, start = 0, multiple = 1;
+	int loop, digitCount = 0, neg = 1, start = 0, multiple = 1;
 
 	int temp, number = 0;
 

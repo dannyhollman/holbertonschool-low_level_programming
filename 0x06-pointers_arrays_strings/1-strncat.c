@@ -1,9 +1,15 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
+  * _strncat - concatenates two strings
   *
+  * @dest: string destination
   *
+  * @src: source string
   *
+  * @n: number of bytes to concatenate
+  *
+  * Return: pointer to concatenated string
   */
 char *_strncat(char *dest, char *src, int n)
 {

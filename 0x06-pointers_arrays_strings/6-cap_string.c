@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
-  *
-  *
-  *
-  *
+  * _islower - checks if lowercase
+  * @c: input
+  * Return: capitalized string
   */
 int _islower(int c)
 {
@@ -16,7 +15,11 @@ int _islower(int c)
 		return (0);
 	}
 }
-
+/**
+  * is_space - checks if space
+  * @n: input
+  * Return: 1 if space, 0 otheriwse
+  */
 int is_space(char n)
 {
 	switch (n)
@@ -39,8 +42,11 @@ int is_space(char n)
 			return (0);
 	}
 }
-
-
+/**
+  * cap_string - capitalizes string
+  * @s: input
+  * Return: pointer to capitalized string
+  */
 char *cap_string(char *s)
 {
 	int count = 0, loop, prev, current;

@@ -64,8 +64,6 @@ char *cap_string(char *s)
 		current = _islower(*(s + loop));
 		if (prev == 1 && current == 1)
 			*(s + loop) = *(s + loop) - 32;
-		if (*(s + loop) == '\t')
-			*(s + (loop)) = ' ';
 	}
 	return (s);
 }

@@ -15,8 +15,6 @@ char *string_toupper(char *s)
 		count++;
 	}
 
-	count -= 1;
-
 	for (loop = 0; loop < count; loop++)
 	{
 		if (*(s + loop) >= 97 && *(s + loop) <= 122)

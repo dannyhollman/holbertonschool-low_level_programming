@@ -60,6 +60,8 @@ char *cap_string(char *s)
 
 	for (loop = 0; loop < count; loop++)
 	{
+		if (loop == 0)
+			*(s + loop) = *(s + loop) - 32;
 		prev = is_space(*(s + (loop - 1)));
 		current = _islower(*(s + loop));
 		if (prev == 1 && current == 1)

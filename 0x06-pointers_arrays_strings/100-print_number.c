@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
   *
   *
@@ -6,24 +7,31 @@
   */
 void print_number(int n)
 {
-	int count = 1, divide = 1;
+	int count = 1, divide = 1, copy = n;
 
-	while (divide <= n / 10)
+	if (n < 0 && n > -2147483648)
+	{
+		copy *= -1;
+		_putchar('-');
+	}
+	if (n == -2147483648)
+	{
+		copy -= -1;
+		copy *= -1;
+		_putchar('-');
+	}
+
+	while (divide <= copy / 10)
 	{
 		count++;
 		divide *= 10;
 	}
 	while (count > 0)
 	{
-		if (n < 0)
-		{
-			_putchar(((n / divide) * -1) + '0');
-		}
-		else
-		{
-			_putchar((n / divide) + '0');
-		}
-		n %= divide;
+		if (n == -2147483648 && divide == 1)
+			copy += 1;
+		_putchar((copy / divide) + '0');
+		copy %= divide;
 		divide /= 10;
 		count--;
 	}

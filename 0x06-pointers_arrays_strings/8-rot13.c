@@ -1,16 +1,18 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
+  * rot13 - encodes string in rot13
   *
+  * @s: input string
   *
-  *
+  * Return: pointer to encoded string
   */
 char *rot13(char *s)
 {
 	int count = 0, count2 = 0;
 
 	char swap1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	
+
 	char swap2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (*(s + count) != '\0')

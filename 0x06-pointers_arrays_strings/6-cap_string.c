@@ -49,7 +49,7 @@ int is_space(char n)
   */
 char *cap_string(char *s)
 {
-	int count = 0, loop, prev, current;
+	int count = 0, loop, prev, current, first;
 
 	while (*(s + count) != '\0')
 	{
@@ -60,7 +60,8 @@ char *cap_string(char *s)
 
 	for (loop = 0; loop < count; loop++)
 	{
-		if (loop == 0)
+		first = _islower(*(s + loop));
+		if (loop == 0 && first == 1)
 			*(s + loop) = *(s + loop) - 32;
 		prev = is_space(*(s + (loop - 1)));
 		current = _islower(*(s + loop));

@@ -1,9 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
+  * print_number - prints integer
   *
+  * @n: input number
   *
-  *
+  * Return: void
   */
 void print_number(int n)
 {

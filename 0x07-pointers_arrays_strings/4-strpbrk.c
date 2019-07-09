@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
-  * _strpbrk -
-  *
-  *
+  * _strpbrk - searches a string for any of a set bytes
+  * @s: string to search
+  * @accept: bytes to search for
+  * Return: pointer to matching byte, or NULL
   */
 char *_strpbrk(char *s, char *accept)
 {

@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
-  *
-  *
-  *
+  * _strspn - gets length of prefix substring
+  * @s: string to check
+  * @accept: substring to search for
+  * Return: number of times substring in string
   */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -15,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 		while (accept[loop2])
 		{
 			if (s[loop] == accept[loop2])
-			{	
+			{
 				total += 1;
 			}
 			if (s[loop + 1] == accept[loop2])
@@ -26,7 +27,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (next != 1)
 			break;
-		else
+		else if (next == 1)
 			next = 0;
 		loop2 = 0;
 		loop++;

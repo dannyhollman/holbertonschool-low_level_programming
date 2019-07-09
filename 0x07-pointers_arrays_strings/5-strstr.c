@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
   * check_string - checks if string matches needle
   * @s: input string
@@ -30,6 +31,8 @@ int check_string(char *s, char *needle)
 char *_strstr(char *haystack, char *needle)
 {
 	int check;
+	
+	char *start = haystack;
 
 	while (*haystack)
 	{
@@ -43,5 +46,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		haystack++;
 	}
-	return (0);
+	return (start);
 }

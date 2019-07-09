@@ -16,5 +16,9 @@ char *_strchr(char *s, char c)
 			return (loop);
 		loop++;
 	}
-	return (loop);
+
+	if (*loop == '\0')
+		return (loop);
+	else
+		return (0);
 }

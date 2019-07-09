@@ -31,7 +31,7 @@ int check_string(char *s, char *needle)
 char *_strstr(char *haystack, char *needle)
 {
 	int check;
-	
+
 	char *start = haystack;
 
 	while (*haystack)
@@ -46,5 +46,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		haystack++;
 	}
-	return (start);
+	if (*needle == '\0')
+		return (start);
+	return (0);
 }

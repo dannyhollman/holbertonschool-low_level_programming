@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
   * helper - recursive helper function
   * @s: input string
@@ -6,6 +7,13 @@
   * @end: ending index
   * Return: recursively returns function
   */
+int count(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	else
+		return (1 + count(s + 1));
+}
 int helper(char *s, int start, int end)
 {
 	if (s[start] == s[end])
@@ -24,13 +32,7 @@ int helper(char *s, int start, int end)
   */
 int is_palindrome(char *s)
 {
-	int count = 0;
-
-	while (s[count])
-	{
-		count++;
-	}
-
-	count -= 1;
-	return (helper(s, 0, count));
+	int size = count(s) - 1;
+	
+	return (helper(s, 0, size));
 }

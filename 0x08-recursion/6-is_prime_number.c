@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
-  *
-  *
-  *
+  * helper - checks if int is prime
+  * @n: input number
+  * @i: input / 2
+  * Return: 1 if prime, 0 otherwise
   */
 int helper(int n, int i)
 {
@@ -22,7 +23,12 @@ int helper(int n, int i)
 		}
 	}
 }
+/**
+  * is_prime_number - start of recursive function to test if int is prime
+  * @n: input number
+  * Return: 1 if prime, 0 otherwise
+  */
 int is_prime_number(int n)
 {
-	return (helper(n, n/2));
+	return (helper(n, n / 2));
 }

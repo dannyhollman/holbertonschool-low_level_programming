@@ -1,0 +1,30 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+  *
+  *
+  *
+  */
+int helper(char *s, int start, int end)
+{
+	if (s[start] == s[end])
+	{
+		if (end == 1)
+			return (1);
+		else
+			return (helper(s, ++start, --end));
+	}
+	return (0);
+}
+int is_palindrome(char *s)
+{
+	int count = 0;
+
+	while (s[count])
+	{
+		count++;
+	}
+	
+	count-= 1;
+	return (helper(s, 0, count));
+}

@@ -30,5 +30,8 @@ int helper(int n, int i)
   */
 int is_prime_number(int n)
 {
-	return (helper(n, n / 2));
+	if (n > 1)
+		return (helper(n, n / 2));
+	else
+		return (0);
 }

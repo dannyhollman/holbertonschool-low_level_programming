@@ -32,10 +32,14 @@ int main(int argc, char *argv[])
 {
 	int coins;
 
-	if (atoi(argv[1]) < 0)
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
-		return (0);
 	}
 	else if (argc == 2)
 	{
@@ -43,9 +47,5 @@ int main(int argc, char *argv[])
 		printf("%d\n", coins);
 		return (0);
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+	return (0);
 }

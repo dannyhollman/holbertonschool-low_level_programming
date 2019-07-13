@@ -32,15 +32,15 @@ int main(int argc, char *argv[])
 {
 	int coins;
 
-	if (argc == 2 && atoi(argv[1]) > 0)
+	if (atoi(argv[1]) < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	else if (argc == 2)
 	{
 		coins = (counter(atoi(argv[1]), 0));
 		printf("%d\n", coins);
-		return (0);
-	}
-	else if (atoi(argv[1]) < 0)
-	{
-		printf("0\n");
 		return (0);
 	}
 	else

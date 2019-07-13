@@ -9,18 +9,8 @@
   */
 int main(int argc, char *argv[])
 {
-	int first, second;
+	int end = argc, place = 1, total = 0;
 
-	if (argc == 3)
-	{
-		first = atoi(argv[1]);
-		second = atoi(argv[2]);
-		printf("%d\n", first + second);
-		return (0);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+	printf("%s\n", argv[end - 1]);
+	return (0);
 }

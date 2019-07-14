@@ -6,6 +6,7 @@
   * @coins: array of coins largest to smallest
   * @n: size of coins array
   * @total: total change needed
+  * Return: minimum coins needed
   */
 int counter(int coins[], int n, int total)
 {
@@ -26,10 +27,10 @@ int counter(int coins[], int n, int total)
 }
 /**
   * main - takes change as input, calls function to calculate
-  * 	minimum coins needed
+  * minimum coins needed
   * @argc: number of inputs
   * @argv: array of inputs
-  * @Return: 0 if input correct, 1 otherwise
+  * Return: 0 if input correct, 1 otherwise
   */
 int main(int argc, char *argv[])
 {

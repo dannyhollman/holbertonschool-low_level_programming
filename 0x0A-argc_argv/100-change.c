@@ -30,7 +30,7 @@ int counter(int total, int count)
   */
 int main(int argc, char *argv[])
 {
-	int coins;
+	unsigned int coins;
 
 	if (argc != 2)
 	{

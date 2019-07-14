@@ -11,7 +11,7 @@
 int counter(int coins[], int n, int total)
 {
 	int loop, count = 0;
-	/* loop through coins largest to smalled */
+	/* loop through coins largest to smallest */
 	for (loop = 0; loop < n; loop++)
 	{
 		/* while total >= current coin */

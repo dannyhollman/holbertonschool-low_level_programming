@@ -27,7 +27,7 @@ int isnumber(char *s)
   */
 int main(int argc, char *argv[])
 {
-	int test, count = argc, loop = 1, total = 0;
+	unsigned int test, count = argc, loop = 1, total = 0;
 
 	while (loop < count)
 	{

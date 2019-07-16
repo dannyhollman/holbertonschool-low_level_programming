@@ -47,7 +47,7 @@ char *str_concat(char *s1, char *s2)
 		loop++;
 	}
 
-	while (loop2 < count2)
+	while (loop2 <= count2)
 	{
 		final[loop] = s2[loop2];
 		loop++;

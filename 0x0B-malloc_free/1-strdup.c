@@ -9,19 +9,17 @@ char *_strdup(char *str)
 {
 	int count = 0, loop = 0;
 
-	char *array = NULL;
+	char *array = malloc(count * sizeof(char));
 
-	if (*str == '\0')
+	if (str == NULL)
 	{
-		return (array);
+		return (NULL);
 	}
 
 	while (str[count])
 	{
 		count++;
 	}
-
-	array = malloc(count * sizeof(char));
 
 	while (loop < count)
 	{

@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
   * _strdup - copies string to newly allocated space
   * @str: input string
@@ -21,7 +22,7 @@ char *_strdup(char *str)
 		count++;
 	}
 
-	while (loop < count)
+	while (loop <= count)
 	{
 		array[loop] = str[loop];
 		loop++;

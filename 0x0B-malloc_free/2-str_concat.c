@@ -1,5 +1,10 @@
 #include "holberton.h"
 #include <stdlib.h>
+/**
+  * count - gets string length
+  * @s: input string
+  * Return: length
+  */
 int count(char *s)
 {
 	int count = 0;
@@ -12,7 +17,7 @@ int count(char *s)
 	return (count);
 }
 /**
-  * _concat - concatenates two strings
+  * str_concat - concatenates two strings
   * @s1: destination string
   * @s2: soruce string
   * Return: pointer to concatenated string
@@ -21,18 +26,20 @@ char *str_concat(char *s1, char *s2)
 {
 	int count1, count2, total, loop = 0, loop2 = 0;
 
-	char *final = NULL;
-
-	if (*s1 == '\0' || *s2 == '\0')
-		return (final);
+	char *final;
 
 	count1 = count(s1);
 
 	count2 = count(s2);
 
-	total = count1 + count2;
+	total = count1 + count2 + 1;
 
 	final = malloc(total * sizeof(char));
+
+	if (final == NULL || s1 == NULL || s2 == NULL)
+	{
+		return (NULL);
+	}
 
 	while (loop < count1)
 	{

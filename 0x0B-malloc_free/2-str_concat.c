@@ -28,6 +28,18 @@ char *str_concat(char *s1, char *s2)
 
 	char *final;
 
+	if (s1 == NULL)
+	{
+		s1 = malloc(sizeof(char));
+		*s1 = '\0';
+	}
+
+	if (s2 == NULL)
+	{
+		s2 = malloc(sizeof(char));
+		*s2 = '\0';
+	}
+
 	count1 = count(s1);
 
 	count2 = count(s2);
@@ -36,7 +48,7 @@ char *str_concat(char *s1, char *s2)
 
 	final = malloc(total * sizeof(char));
 
-	if (final == NULL || s1 == NULL || s2 == NULL)
+	if (final == NULL)
 	{
 		return (NULL);
 	}

@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
   * create_array - crates an array of chars and initializes it with a char
   * @size: size of array
@@ -10,12 +11,14 @@ char *create_array(unsigned int size, char c)
 {
 	unsigned int loop = 0;
 
-	char *array = malloc(size * sizeof(char));
+	char *array;
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
+
+	array = malloc(size * sizeof(char));
 
 	while (loop < size)
 	{

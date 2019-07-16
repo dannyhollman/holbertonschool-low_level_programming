@@ -33,32 +33,24 @@ char *str_concat(char *s1, char *s2)
 		s1 = malloc(sizeof(char));
 		*s1 = '\0';
 	}
-
 	if (s2 == NULL)
 	{
 		s2 = malloc(sizeof(char));
 		*s2 = '\0';
 	}
-
 	count1 = count(s1);
-
 	count2 = count(s2);
-
 	total = count1 + count2 + 1;
-
 	final = malloc(total * sizeof(char));
-
 	if (final == NULL)
 	{
 		return (NULL);
 	}
-
 	while (loop < count1)
 	{
 		final[loop] = s1[loop];
 		loop++;
 	}
-
 	while (loop2 <= count2)
 	{
 		final[loop] = s2[loop2];

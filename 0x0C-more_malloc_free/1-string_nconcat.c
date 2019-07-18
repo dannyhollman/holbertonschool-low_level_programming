@@ -65,5 +65,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		loop++;
 		loop2++;
 	}
+	final[loop] = '\0';
 	return (final);
 }

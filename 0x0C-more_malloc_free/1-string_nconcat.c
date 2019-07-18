@@ -31,13 +31,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *final;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 	count1 = count(s1);
 	count2 = count(s2);
 	if (n >= count2)
@@ -51,9 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	final = malloc(total * sizeof(char));
 	if (final == NULL)
-	{
 		return (NULL);
-	}
 	while (loop < count1)
 	{
 		final[loop] = s1[loop];

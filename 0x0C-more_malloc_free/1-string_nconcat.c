@@ -45,6 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= count2)
 	{
 		total = count1 + count2 + 1;
+		n = count2;
 	}
 	else
 	{

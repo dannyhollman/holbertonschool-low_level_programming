@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
   * array_range - create array from min to max
   * @min: starting number
@@ -22,7 +23,7 @@ int *array_range(int min, int max)
 	if (array == NULL)
 		return (NULL);
 
-	while (loop <= dif)
+	while (loop < dif)
 	{
 		array[loop] = min;
 		min++;

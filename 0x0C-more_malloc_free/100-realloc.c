@@ -15,7 +15,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	char *copy = ptr;
 
-	if (new_size == old_size )
+	if (new_size == old_size)
 	{
 		return (ptr);
 	}
@@ -45,6 +45,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			mem[loop] = copy[loop];
 		}
 	}
+	free (ptr);
 	return (mem);
 }
 

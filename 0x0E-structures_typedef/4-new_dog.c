@@ -1,9 +1,11 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
-  *
-  *
-  *
+  * new_dog - creates new dog struct
+  * @name: name of dog
+  * @age: age of dog
+  * @owner: owner of the dog
+  * Return: pointer to new struct
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {

@@ -1,5 +1,44 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ * _strdup - copies string to newly allocated space
+ * @str: input string
+ * Return: pointer to new string
+ */
+char *_strdup(char *str)
+{
+  int count = 0, loop = 0;
+
+  char *array;
+
+  if (str == NULL)
+    {
+      return (NULL);
+    }
+
+  while (str[count])
+    {
+      count++;
+    }
+
+  count++;
+
+  array = malloc(count * sizeof(char));
+
+  if (array == NULL)
+    {
+      return (NULL);
+    }
+
+  while (loop <= count)
+    {
+      array[loop] = str[loop];
+      loop++;
+    }
+  return (array);
+}
 /**
   * new_dog - creates new dog struct
   * @name: name of dog
@@ -11,21 +50,24 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new;
 
+	new = malloc(sizeof(dog_t));
+	if (new == NULL)
+		return (NULL);
 	if (name != NULL)
 	{
-		new = malloc(sizeof(dog_t));
-		if (new == NULL)
+		new->name = _strdup(name);
+		if (new->name == NULL)
+		{
+			free(new);
 			return (NULL);
+		}
 	}
-	new->name = malloc(sizeof(name));
-	if (new->name == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
+	else
+		new->name = _strdup("");
+
 	if (owner != NULL)
 	{
-		new->owner = malloc(sizeof(owner));
+		new->owner = _strdup(owner);
 		if (new->owner == NULL)
 		{
 			free(new->name);
@@ -33,6 +75,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 	}
+	else
+		new->owner = _strdup("");
+
 	new->name = name;
 	new->age = age;
 	new->owner = owner;

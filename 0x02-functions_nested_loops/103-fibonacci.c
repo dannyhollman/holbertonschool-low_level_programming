@@ -1,21 +1,20 @@
 #include <stdio.h>
 /**
-  *
-  *
-  *
+  * main - prints sum of even fibonacci numbers
+  * Return: always 0;
   */
 int main(void)
 {
-	long int i, first = 0, second = 1, next = first + second;
+	long int first = 0, second = 1, next = first + second, sum = 0;
 
-	while (next < 4000000)
+	while (next <= 4000000)
 	{
-		printf("%ld, ", next);
-
 		first = second;
 		second = next;
 		next = first + second;
+		if (next % 2 == 0)
+			sum += next;
 	}
-	putchar('\n');
+	printf("%ld\n", sum);
 	return (0);
 }

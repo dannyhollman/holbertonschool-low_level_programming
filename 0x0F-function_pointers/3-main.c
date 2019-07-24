@@ -18,13 +18,11 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)
+	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)\
+			&& (strcmp(argv[3], "0") == 0))
 	{
-		if (strcmp(argv[3], "0") == 0)
-		{
 			printf("Error\n");
 			exit(100);
-		}
 	}
 
 	num1 = atoi(argv[1]);

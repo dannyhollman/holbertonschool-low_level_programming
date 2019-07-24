@@ -14,11 +14,17 @@ int int_index(int *array, int size, int (*cmp)(int))
 	if (size <= 0)
 		return (-1);
 
-	for (loop = 0; loop < size; loop++)
+	if (array)
 	{
-		check = cmp(array[loop]);
-		if (check != 0)
-			return (loop);
+		if (cmp)
+		{
+			for (loop = 0; loop < size; loop++)
+			{
+				check = cmp(array[loop]);
+				if (check != 0)
+					return (loop);
+			}
+		}
 	}
 	return (-1);
 }

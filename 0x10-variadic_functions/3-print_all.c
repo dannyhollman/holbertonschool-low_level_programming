@@ -13,7 +13,6 @@ void print_all(const char * const format, ...)
 	va_list valist;
 
 	va_start(valist, format);
-
 	while (format[i] != '\0')
 	{
 		if (onoff == 0 && i != 0)
@@ -33,9 +32,11 @@ void print_all(const char * const format, ...)
 			case 's':
 				temp = va_arg(valist, char *);
 				if (temp != NULL)
+				{
 					printf("%s", temp);
-				else
-					printf("(nil)");
+					break;
+				}
+				printf("(nil)");
 				break;
 			default:
 				onoff = 1;

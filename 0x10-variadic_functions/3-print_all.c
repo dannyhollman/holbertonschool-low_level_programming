@@ -7,7 +7,7 @@
   */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, onoff = 0;
+	int i = 0, onoff = 0;
 
 	char *temp;
 
@@ -18,7 +18,6 @@ void print_all(const char * const format, ...)
 	{
 		if (onoff == 0 && i != 0)
 			printf(", ");
-		onoff = 0;
 		switch (format[i])
 		{
 			case 'c':
@@ -38,9 +37,11 @@ void print_all(const char * const format, ...)
 				break;
 			default:
 				onoff = 1;
-				break;
+				i++;
+				continue;
 		}
-	i++;
+		onoff = 0;
+		i++;
 	}
 	va_end(valist);
 	printf("\n");

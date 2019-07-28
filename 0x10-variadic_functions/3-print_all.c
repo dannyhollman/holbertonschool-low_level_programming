@@ -1,13 +1,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-  *
-  *
-  *
+  * print_all - prints any input
+  * @format: list of argument types
   */
 void print_all(const char * const format, ...)
 {
 	int i = 0, onoff = 0;
+
+	char *temp;
 
 	va_list valist;
 
@@ -30,7 +31,11 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(valist, double));
 				break;
 			case 's':
-				printf("%s", va_arg(valist, char *));
+				temp = va_arg(valist, char *);
+				if (temp != NULL)
+					printf("%s", temp);
+				else
+					printf("(nil)");
 				break;
 			default:
 				onoff = 1;
@@ -38,8 +43,6 @@ void print_all(const char * const format, ...)
 		}
 	i++;
 	}
-
 	va_end(valist);
-
 	printf("\n");
 }

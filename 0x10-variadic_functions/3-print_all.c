@@ -8,9 +8,7 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0, onoff = 0;
-
 	char *temp;
-
 	va_list valist;
 
 	va_start(valist, format);
@@ -32,7 +30,10 @@ void print_all(const char * const format, ...)
 			case 's':
 				temp = va_arg(valist, char *);
 				if (temp == NULL)
-					temp = "(nil)";
+				{
+					printf("(nil)");
+					break;
+				}
 				printf("%s", temp);
 				break;
 			default:

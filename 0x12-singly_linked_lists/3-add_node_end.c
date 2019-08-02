@@ -11,7 +11,7 @@ char *_strdup(const char *s)
 	char *array;
 
 	if (s == NULL)
-		return(NULL);
+		return (NULL);
 
 	while (s[count])
 		count++;
@@ -20,7 +20,7 @@ char *_strdup(const char *s)
 
 	array = malloc(count * sizeof(char));
 	if (array == NULL)
-		return(NULL);
+		return (NULL);
 
 	while (loop <= count)
 	{
@@ -43,6 +43,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *last = *head;
 
 	list_t *new_node = malloc(sizeof(list_t));
+
 	if (new_node == NULL)
 		exit(1);
 
@@ -58,7 +59,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (*head == NULL)
 	{
 		*head = new_node;
-		return(new_node);
+		return (new_node);
 	}
 
 	while (last->next != NULL)
@@ -66,5 +67,5 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	last->next = new_node;
 
-	return(new_node);
+	return (new_node);
 }

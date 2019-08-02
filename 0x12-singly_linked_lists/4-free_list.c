@@ -9,6 +9,9 @@ void free_list(list_t *head)
 
 	list_t *current = head;
 
+	if (head == NULL)
+		return;
+
 	while (current->next != NULL)
 	{
 		next = current->next;

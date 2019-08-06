@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-  * free_list - free all elements of linked list
+  * free_listint2 - free all elements of linked list
   * @head: pointer to head of list
   */
 void free_listint2(listint_t **head)

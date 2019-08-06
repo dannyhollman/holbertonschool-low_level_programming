@@ -1,9 +1,10 @@
 #include "lists.h"
 /**
-  *
-  *
-  *
-  *
+  * insert_nodeint_at_index - insert new node nth position
+  * @head: double pointer to head
+  * @idx: index to insert at
+  * @n: data for new node
+  * Return: pointer to new node
   */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {

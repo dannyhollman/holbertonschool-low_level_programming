@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdio.h>
+
 /**
  * set_bit - sets bit at index to 1
  * @n: input number
@@ -9,5 +11,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	*n |= 1 << index;
 
-	return (*n);
+	return (1);
 }

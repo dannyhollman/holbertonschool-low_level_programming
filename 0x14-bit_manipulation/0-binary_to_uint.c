@@ -1,5 +1,27 @@
 #include "holberton.h"
-#include <stdlib.h>
+/**
+  * _atoi - converts string to int
+  *
+  * @s: string input
+  *
+  * Return: converted string
+  */
+int _atoi(char *s)
+{
+	int loop = 0, neg = 1, number = 0;
+
+	if (s[0] == '-')
+	{
+		neg *= -1;
+		loop++;
+	}
+	for (; s[loop] != '\0'; loop++)
+	{
+		number = number * 10 + s[loop] - '0';
+	}
+	number *= neg;
+	return (number);
+}
 /**
  * binary_to_uint - converts binary to unisigned int
  * @b: input string
@@ -20,7 +42,10 @@ unsigned int binary_to_uint(const char *b)
 		temp++;
 	}
 
-	num = atoi(b);
+	while (*b == 0)
+		b++;
+
+	num = _atoi((char *)b);
 
 	while (num)
 	{
@@ -32,3 +57,4 @@ unsigned int binary_to_uint(const char *b)
 
 	return (decimal);
 }
+

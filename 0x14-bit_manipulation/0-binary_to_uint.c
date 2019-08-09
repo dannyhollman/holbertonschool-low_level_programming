@@ -41,9 +41,6 @@ unsigned int binary_to_uint(const char *b)
 		temp++;
 	}
 
-	if ((count - 1) > 32)
-		return (0);
-
 	num = _atoi((char *)b);
 
 	while (num)

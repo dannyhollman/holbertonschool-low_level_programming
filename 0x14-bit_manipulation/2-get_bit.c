@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * get_bit - returns value of bit at index
  * @n: input number
@@ -7,5 +8,19 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
+	unsigned long int temp = n;
+	unsigned int count = 0;
+
+	while (temp)
+	{
+		count++;
+		temp >>= 1;
+	}
+
+	count--;
+
+	if (index > count)
+		return (-1);
+
 	return ((n >> index) & 1);
 }

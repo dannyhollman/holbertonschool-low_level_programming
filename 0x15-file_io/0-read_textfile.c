@@ -24,11 +24,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	n = read(fd, buf, letters);
+	if (n == -1)
+		return (0);
+
 	count = write(1, buf, n);
 	if (count == -1)
 		return (0);
 
-	count++;
 	free(buf);
 	return (count);
 }

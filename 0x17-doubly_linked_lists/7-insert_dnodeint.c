@@ -18,11 +18,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	current = *h;
 	if (idx == 0)
 	{
+		new->n = n;
 		new->prev = NULL;
 		new->next = *h;
 		(*h)->prev = new;
 		*h = new;
-		return (*h);
+		return (new);
 	}
 	while (current != NULL)
 	{

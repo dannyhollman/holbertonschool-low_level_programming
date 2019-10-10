@@ -11,17 +11,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (size == 0)
 		return (NULL);
 
-	new = malloc(sizeof(hash_node_t));
+	new = malloc(sizeof(hash_table_t));
 	if (new == NULL)
 		return (NULL);
 
 	new->size = size;
-	new->array = malloc(sizeof(hash_node_t) * size);
+	new->array = calloc(size, sizeof(hash_node_t));
 	if (new->array == NULL)
 	{
 		free(new);
 		return (NULL);
 	}
-	memset(new->array, 0, sizeof(hash_node_t) * size);
 	return (new);
 }

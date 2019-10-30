@@ -1,5 +1,10 @@
 #include "sort.h"
-
+/**
+ * heapify - create heap
+ * @array: input array
+ * @size: size of array
+ * @i: i
+ */
 void heapify(int *array, size_t size, int i)
 {
 	int temp, largest = i;
@@ -20,7 +25,11 @@ void heapify(int *array, size_t size, int i)
 		heapify(array, size, largest);
 	}
 }
-
+/**
+ * heap_sort - sort array using heap sort
+ * @array: input array
+ * @size: size of array
+ */
 void heap_sort(int *array, size_t size)
 {
 	int i, temp;

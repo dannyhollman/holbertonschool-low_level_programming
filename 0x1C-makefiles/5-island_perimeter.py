@@ -19,5 +19,4 @@ def island_perimeter(grid):
                 # check cell after
                 if grid[row][cell + 1] == 0:
                     perim += 1
-                    break
     return perim

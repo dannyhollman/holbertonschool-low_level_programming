@@ -45,10 +45,10 @@ int binary_search(int *array, size_t size, int value)
 		print_array(array, first, last);
 		if (array[middle] < value)
 			first = middle + 1;
-		else if (array[middle] == value)
-			return (middle);
 		else
 			last = middle - 1;
+		if (array[middle] == value)
+			return (middle);
 		middle = (first + last) / 2;
 	}
 	return (-1);
